@@ -9,6 +9,36 @@
   <strong>Discount:</strong>
   <%= @customer.discount %>
 </p>
+
+<p>
+  <strong>Orders:</strong>
+  <table>
+  <thead>
+    <tr>
+      <th>Placed on</th>
+      <th>Status</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+  
+    <% @CusOrders = Order.where(:customer_id => @customer.id)%>
+  
+    <% @CusOrders.each do |order| %>
+      <tr>
+        <td><%= order.placed_on %></td>
+        <td><%= order.status %></td>
+        <td><%= link_to 'Show', order %></td>
+        <td><%= link_to 'Edit', edit_order_path(order) %></td>
+        <td><%= link_to 'Destroy', order, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+</p>
+
+
 <%= link_to 'New Order', new_order_path(customer: @customer) %>
 
 <%= link_to 'Edit', edit_customer_path(@customer) %> |
