@@ -12,6 +12,7 @@ describe "test02", :type => :feature do
 		expect(page).to have_content order.placed_on + " " + order.status
 
 	end
+  end
 
   it "include Price in the Orders" do
     visit "/customers/#{@customer.id}"
@@ -19,4 +20,4 @@ describe "test02", :type => :feature do
      totalSum = @filterdOrders.sum("price")
     expect(page).to have_content "Total Price: " + "#{totalSum}"
   end
-end
+  end
