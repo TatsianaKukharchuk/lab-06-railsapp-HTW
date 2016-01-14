@@ -23,5 +23,13 @@ FactoryGirl.define do
     placed_on { 3.days.ago}
     status :new
   end
+  
+  factory :order4, class: Order do
+    association :customer, factory: :customer_with_priced_orders
+    placed_on { 10.days.ago}
+	status :new
+	price 15.0
+  end
+  
 end
 

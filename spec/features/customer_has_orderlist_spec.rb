@@ -7,11 +7,11 @@ describe "test02", :type => :feature do
 
   it "show all orders to one customer" do
     visit "/customers/#{@costumer.id}"
-    @filterdOrders = Order.where(:customer_id => @customer.id)
-    amount = @filterdOrder.size
+    @orders = Customer.where(name: "Dagobert").first.orders
+    @orders.each do |order|
+		expect(page).to have_content order.placed_on + " " + order.status
 
-    expect(page).to to have_content "Number Of Orders: " + "#{amount}"
-  end
+	end
 
   it "include Price in the Orders" do
     visit "/customers/#{@customer.id}"
