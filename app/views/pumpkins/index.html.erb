@@ -1,12 +1,12 @@
-<h1>Listing pumpkins</h1>
+<h1><%= t "headline" %></h1>
 
 <table>
   <thead>
     <tr>
-      <th>Type</th>
-      <th>Color</th>
-      <th>Size</th>
-      <th>Price</th>
+      <th><%= sortable "name", "Type" %></th>
+      <th><%= sortable "color", "Color" %></th>
+      <th><%= sortable "size", "Size" %></th>
+      <th><%= sortable "price", "Price" %></th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -18,9 +18,9 @@
         <td><%= pumpkin.color %></td>
         <td><%= pumpkin.size %></td>
         <td><%= pumpkin.price %></td>
-        <td><%= link_to 'Show', pumpkin %></td>
-        <td><%= link_to 'Edit', edit_pumpkin_path(pumpkin) %></td>
-        <td><%= link_to 'Destroy', pumpkin, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to (t "rowOptions.show"), pumpkin %></td>
+        <td><%= link_to (t "rowOptions.edit"), edit_pumpkin_path(pumpkin) %></td>
+        <td><%= link_to (t "rowOptions.destroy"), pumpkin, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>
@@ -28,4 +28,11 @@
 
 <br>
 
-<%= link_to 'New Pumpkin', new_pumpkin_path %>
+
+<%= link_to (t "new Pumpkin"), new_pumpkin_path %>
+<br>
+<%= link_to 'Deutsch', locale: "de" %>
+<%= link_to 'Русский', locale: "ru" %>
+<%= link_to 'English', locale: "en" %>
+<br>
+

@@ -20,6 +20,30 @@
   <%= @order.price %>
 </p>
 
-
+<p>
+  <strong>Line Items:</strong>
+</p>
+<table>
+  <thead>
+    <tr>
+      <th>Type</th>
+      <th>Color</th>
+	    <th>Size</th>
+	    <th>Price</th>
+	    <th>Amount</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @line_items.each do |lineitem| %>
+      <tr>
+        <td align="center"><%= lineitem.pumpkin.name %></td>
+        <td align="center"><%= lineitem.pumpkin.color %></td>
+        <td align="center"><%= lineitem.pumpkin.size %></td>
+        <td align="center"><%= lineitem.pumpkin.price %></td>
+        <td align="center"><%= lineitem.amount %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
 <%= link_to 'Edit', edit_order_path(@order) %> |
 <%= link_to 'Back', orders_path %>

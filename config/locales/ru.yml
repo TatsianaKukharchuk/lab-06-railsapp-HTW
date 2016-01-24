@@ -19,19 +19,19 @@
 # To learn more, please read the Rails Internationalization guide
 # available at http://guides.rubyonrails.org/i18n.html.
 
-en:
-  headline: "Listing pumpkins"
+ru:
+  headline: "Список тыкв"
   tableHead: 
-    name: "Type" 
-    color: "Color"
-    size: "Size"
-    price: "Price"
+    name: "Вид"
+    color: "Цвет"
+    size: "Размер"
+    price: "Цена"
   rowOptions:
-    show: "Show"
-    edit: "Edit"
-    destroy: "Destroy"
-  new Pumpkin: "New Pumpkin"
+    show: "Показать"
+    edit: "Редактировать"
+    destroy: "Удалить"
+  new Pumpkin: "Новая тыква"
   Language: 
-    german: "german"
-    english: "english"
-    russian: "russian"
+    german: "немецкий"
+    english: "английский"
+    russian: "русский"

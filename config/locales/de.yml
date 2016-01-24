@@ -19,19 +19,20 @@
 # To learn more, please read the Rails Internationalization guide
 # available at http://guides.rubyonrails.org/i18n.html.
 
-en:
-  headline: "Listing pumpkins"
+de:
+  headline: "Auflistung der Kürbisse"
   tableHead: 
-    name: "Type" 
-    color: "Color"
-    size: "Size"
-    price: "Price"
+    name: "Typ"
+    color: "Farbe"
+    size: "Große"
+    price: "Preis"
   rowOptions:
-    show: "Show"
-    edit: "Edit"
-    destroy: "Destroy"
-  new Pumpkin: "New Pumpkin"
+    show: "Anzeigen"
+    edit: "Bearbeiten"
+    destroy: "Zerstören"
+  new Pumpkin: "neue Kürbis"
   Language: 
-    german: "german"
-    english: "english"
-    russian: "russian"
+    german: "deutsch"
+    english: "englisch"
+    russian: "russisch"
+ 

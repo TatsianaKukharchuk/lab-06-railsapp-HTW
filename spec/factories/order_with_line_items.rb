@@ -16,11 +16,11 @@ FactoryGirl.define do
   end
 
   factory :line_item_1, class: LineItem do
-  	association :pumpkin, factory:  :pumpkin1
+  	association :pumpkin, factory:  :japanPumpkin
   	amount 2
   end
   factory :line_item_2, class: LineItem do
-  	association :pumpkin, factory:  :pumpkin2
+  	association :pumpkin, factory:  :chinaPumpkin
   	amount 1
   end
 
